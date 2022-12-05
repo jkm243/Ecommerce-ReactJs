@@ -1,9 +1,9 @@
 import React from 'react'
 
 function Footer() {
-    return (
-        <div className='App'>
-        <section id="clients" class="clients">
+  return (
+    <div className='App'>
+      <section id="clients" class="clients">
         <div class="container">
           <div class="owl-carousel owl-theme" id="client">
             <div class="item">
@@ -36,7 +36,7 @@ function Footer() {
         </div>
 
       </section>
-             <section id="newsletter" class="newsletter">
+      <section id="newsletter" class="newsletter">
         <div class="container">
           <div class="hm-footer-details">
             <div class="row">
@@ -113,25 +113,25 @@ function Footer() {
         </div>
 
       </section>
-        <footer id="footer" class="footer">
-            <div class="container">
-                <div class="hm-footer-copyright text-center">
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100004188587518"><i class="fa fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/accounts/login/?next=%2Fjacques_katsuva%2F&source=omni_redirect"><i class="fa fa-instagram"></i></a>
-                        <a href="https://twitter.com/jacqueskatsuva"><i class="fa fa-twitter"></i></a>
-                        <a href="https://github.com/jkm243/"><i class="fa fa-github"></i></a>
-                        <a href="https://www.jkmconception.com"><i class="fa fa-pencil"></i></a>
-                        <a href="https://www.jacqueskatsuva.com"><i class="fa fa-code"></i></a>
-                    </div>
-                    <p>
-                        &copy;copyright. designed and developed by <a href="https://www.therichpost.com/">Jacques Katsuva with template html of Jassa</a>
-                    </p>
-                </div>
+      <footer id="footer" class="footer">
+        <div class="container">
+          <div class="hm-footer-copyright text-center">
+            <div class="footer-social">
+              <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100004188587518"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/accounts/login/?next=%2Fjacques_katsuva%2F&source=omni_redirect"><i class="fa fa-instagram"></i></a>
+              <a href="https://twitter.com/jacqueskatsuva"><i class="fa fa-twitter"></i></a>
+              <a href="https://github.com/jkm243/"><i class="fa fa-github"></i></a>
+              <a href="https://www.jkmconception.com"><i class="fa fa-pencil"></i></a>
+              <a href="https://www.jacqueskatsuva.com"><i class="fa fa-code"></i></a>
             </div>
+            <p>
+              &copy;copyright. designed and developed by <a href="https://www.therichpost.com/">Jacques Katsuva with template html of Jassa</a>
+            </p>
+          </div>
+        </div>
 
-        </footer></div>
-    )
+      </footer></div>
+  )
 }
 
 export default Footer

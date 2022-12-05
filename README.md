@@ -3,7 +3,7 @@
 
   &#xa0;
 
-  <!-- <a href="https://shoppingshoesreactjs.netlify.app">Demo</a> -->
+  <a href="https://ecommerce-shoes-reactjs.netlify.app/">Demo</a>
 </div>
 
 <h1 align="center">Shopping Shoes Reactjs</h1>
