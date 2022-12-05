@@ -50,9 +50,10 @@ A full stack e-commerce website made with React, Express, MongoDB and NodeJS.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Responsive design;\
+:heavy_check_mark: Dashboard;\
+:heavy_check_mark: Login & Sign Up;\
+:heavy_check_mark: Dark and light Mode;\
 
 ## :rocket: Technologies ##
 
@@ -62,6 +63,9 @@ The following tools were used in this project:
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [MongoDb](https://www.mongodb.com/)
+- [Eslint](https://eslint.org)
+- [React switch](https://www.npmjs.com/package/react-switch)
+<!-- - [Styled components](https://styled-components.com) -->
 
 ## :white_check_mark: Requirements ##
 
