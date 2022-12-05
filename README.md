@@ -9,13 +9,13 @@
 <h1 align="center">Shopping Shoes Reactjs</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/jkm243/shopping-shoes-reactjs?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/jkm243/ecommerce-reactjs?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/jkm243/shopping-shoes-reactjs?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/jkm243/ecommerce-reactjs?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jkm243/shopping-shoes-reactjs?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jkm243/ecommerce-reactjs?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/jkm243/shopping-shoes-reactjs?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/jkm243/ecommerce-reactjs?color=56BEB8">
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/jkm243/shopping-shoes-reactjs?color=56BEB8" /> -->
 
@@ -75,10 +75,10 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/jkm243/shopping-shoes-reactjs
+$ git clone https://github.com/jkm243/ecommerce-reactjs
 
 # Access
-$ cd shopping-shoes-reactjs
+$ cd ecommerce-reactjs
 
 # Install dependencies
 $ yarn
