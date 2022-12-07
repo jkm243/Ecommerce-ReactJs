@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Header() {
+  const theme = window.localStorage.getItem("theme");
+  const [isClicked, setIsClicked] = useState(false)
+  if (theme === "dark") document.body.classList.add("dark");
+
+  const triggerToggle = () => {
+    let element = document.body;
+    element.classList.toggle("dark");
+    setIsClicked(isClicked => !isClicked);
+    if (theme === "dark") {
+      window.localStorage.setItem("theme", "light");
+    } else window.localStorage.setItem("theme", "dark");
+  }
+
+  function handleClick(e) {
+    e.preventDefault();
+  }
+
   return (
     <div classNameName="App">
       <div className="top-area">
@@ -73,11 +90,12 @@ function Header() {
                     </ul>
                   </li>
                   <li className="nav-setting">
-                    <a href="index.html"><span className="lnr lnr-moon"></span></a>
+                    <a href='null' onClick={handleClick}><button className="dark-mode-btn" onClick={triggerToggle}>{isClicked ? "☀️" : "🌑"}</button></a>
+                    {/* <a href="index.html" onClick={handleClick} onChange={triggerToggle}>{`<span className='lnr lnr-moon'></span> ${toggle ? <span className='lnr lnr-sun'></span> : ''}`}</a> */}
                   </li>
                 </ul>
               </div>
-              
+
               <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                   <i className="fa fa-bars"></i>
