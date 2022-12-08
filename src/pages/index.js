@@ -5,6 +5,7 @@ import Header from '../components/Header.js'
 import Hero from '../components/Hero.js'
 import Popular from '../components/Popular.js'
 import ScrollButton from '../components/ScrollButton.js'
+import Featured from '../components/Featured.js'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <Hero/>
         <Popular/>
         <Arrivals/>
+        <Featured/>
         <Footer/>
         <ScrollButton/>
     </>
