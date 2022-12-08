@@ -90,8 +90,7 @@ function Header() {
                     </ul>
                   </li>
                   <li className="nav-setting">
-                    <a href='null' onClick={handleClick}><button className="dark-mode-btn" onClick={triggerToggle}>{isClicked ? "☀️" : "🌑"}</button></a>
-                    {/* <a href="index.html" onClick={handleClick} onChange={triggerToggle}>{`<span className='lnr lnr-moon'></span> ${toggle ? <span className='lnr lnr-sun'></span> : ''}`}</a> */}
+                    <a href='null' onClick={handleClick}><button className="dark-mode-btn" onClick={triggerToggle}>{isClicked ? "🌓" : "☀️"}</button></a>
                   </li>
                 </ul>
               </div>

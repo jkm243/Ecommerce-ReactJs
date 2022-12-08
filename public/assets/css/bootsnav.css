@@ -28,7 +28,7 @@ nav.bootsnav .dropdown.megamenu-fw .dropdown-menu {
 
 /* Navbar
 =================================*/
-nav.navbar.bootsnav{
+/* nav.navbar.bootsnav{
     margin-bottom: 0;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
@@ -38,7 +38,7 @@ nav.navbar.bootsnav{
     border: none;
     border-bottom: solid 1px #e0e0e0;
     z-index: 9;
-}
+} */
 
 nav.navbar.bootsnav ul.nav > li > a{
     color: #6f6f6f;
