@@ -28,8 +28,8 @@ const ScrollButton = () => {
     return (
         <div className='App'>
             <div id="scroll-Top">
-                <div class="return-to-top">
-                    <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true" onClick={scrollToTop}
+                <div className="return-to-top">
+                    <i className="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true" onClick={scrollToTop}
 	style={{display: visible ? 'inline' : 'none'}}></i>
                 </div>
             </div>

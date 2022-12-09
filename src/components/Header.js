@@ -19,7 +19,7 @@ function Header() {
   }
 
   return (
-    <div classNameName="App">
+    <div className="App">
       <div className="top-area">
         <div className="header-area">
 
