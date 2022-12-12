@@ -26,7 +26,6 @@ function Header() {
 
           <nav className="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
 
-
             <div className="top-search">
               <div className="container">
                 <div className="input-group">
@@ -48,11 +47,13 @@ function Header() {
                   <li className="nav-setting">
                     <a href="index.html"><span className="lnr lnr-cog"></span></a>
                   </li>
-                  <li className="dropdown">
-                    <a href="index.html" className="dropdown-toggle" data-toggle="dropdown" >
-                      <span className="lnr lnr-cart"><Link to="/"></Link></span>
+                  <li className="nav-setting">
+                  <Link to="/cart">
+                    <a href="null"  data-toggle="dropdown">
+                      <span className="lnr lnr-cart" ></span>
                       <span className="badge badge-bg-1">2</span>
-                    </a>
+                     </a>
+                    </Link>
                   </li>
                   <li className="nav-setting">
                     <a href='null' onClick={handleClick}><button className="dark-mode-btn" onClick={triggerToggle}>{isClicked ? "🌓" : "☀️"}</button></a>
@@ -64,12 +65,18 @@ function Header() {
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                   <i className="fa fa-bars"></i>
                 </button>
-                <a className="navbar-brand" href="index.html">Luka.</a>
-
+                
+                <Link to="/" className="navbar-brand">
+                        Luka.
+                      </Link>
               </div>
               <div className="collapse navbar-collapse menu-ui-design" id="navbar-menu">
                 <ul className="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-                  <li className=" scroll active"><a href="#home">home</a></li>
+                  <li >
+                    <Link to="/" className=" scroll active">
+                        Home
+                      </Link>
+                  </li>
                   <li className="scroll"><a href="#new-arrivals">new arrival</a></li>
                   <li className="scroll"><a href="#feature">features</a></li>
                   <li className="scroll"><a href="#blog">blog</a></li>

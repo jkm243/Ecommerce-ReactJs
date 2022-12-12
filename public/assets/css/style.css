@@ -64,6 +64,9 @@ p {
 	font-size:16px;
     line-height: 1.8;
 }
+.carte{
+    margin-top: 15%;
+}
 img{border:none;max-width:100%; height:auto;}
 ul{
 	padding: 0;

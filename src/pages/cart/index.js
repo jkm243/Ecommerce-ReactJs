@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cart = () => {
   return (
-    <div className='App'>                     
+    <div className='App carte'>                     
     <ul className="cart-list s-cate">
     <li className="single-cart-list">
       <a href="index.html" className="photo"><img src="assets/images/arrivals1.png" className="cart-thumb" alt="image3" /></a>
