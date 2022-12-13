@@ -36,7 +36,7 @@ body{
 }
 .dark {
     --text-white: #e6e6e6;
-    --text-dark: #ffffff;
+    --text-dark: #19273f;
     --text-grey-up:#d1d1d1;
     --bg-grey-light: #0d1624;
     --bg-white: #152135;
@@ -824,12 +824,13 @@ span.feature-review {margin-left: 10px;}
         9. Clients
 --------------------------------------*/
 .clients {
-    background: #f8f9fd;
+    background: var(--text-dark);
     display: flex;
     align-items: center;
     height: 220px;
+    
 }
-.clients .item {text-align: center;}
+.clients .item {text-align: center;border: 1px solid red;}
 /*-------------------------------------
         10. News-letter
 --------------------------------------*/

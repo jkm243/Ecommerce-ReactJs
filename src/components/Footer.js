@@ -1,5 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import c1 from '../assets/c1.png'
+import c2 from '../assets/c2.png'
+import c3 from '../assets/c3.png'
+import c4 from '../assets/c4.png'
+import c5 from '../assets/c5.png'
 
 function Footer() {
   return (
@@ -9,28 +14,26 @@ function Footer() {
           <div className="owl-carousel owl-theme" id="client">
             <div className="item">
               <a href="index.html">
-                <img src="assets/images/c1.png" alt="brand-image1" />
+                <img src={c1} alt="brand-image1" />
               </a>
             </div>
             <div className="item">
               <a href="index.html">
-                <img src="assets/images/c2.png" alt="brand-image2" />
+                <img src={c2} alt="brand-image2" />
               </a>
             </div>
             <div className="item">
               <a href="index.html">
-                <img src="assets/images/c3.png" alt="brand-image3" />
+                <img src={c3} alt="brand-image3" />
               </a>
             </div>
             <div className="item">
               <a href="index.html">
-                <img src="assets/images/c4.png" alt="brand-image4" />
+                <img src={c4} alt="brand-image4" />
               </a>
             </div>
-            <div className="item">
-              <a href="index.html">
-                <img src="assets/images/c5.png" alt="brand-image5" />
-              </a>
+            <div className="item">  
+                <img src={c5} alt="brand-image5" />
             </div>
           </div>
 
