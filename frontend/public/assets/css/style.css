@@ -43,6 +43,9 @@ body{
     --bg-blue-dark: #dddddd;
     --bg-indigo: #7577e1;
   }
+.loader{
+    color: var(--text-dark);
+}
 
 a,a:hover,a:active,a:focus{
 	display:inline-block;
