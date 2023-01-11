@@ -10,7 +10,7 @@ function Popular() {
               <div className="col-md-3">
                 <div className="single-populer-products">
                   <div className="single-populer-product-img mt40">
-                    <img src="assets/images/p1.png" alt="populer-products images" />
+                    <img src="assets/images/amax97mini.png" alt="populer-products images" />
                   </div>
                   <h2><a href="index.html">arm chair</a></h2>
                   <div className="single-populer-products-para">

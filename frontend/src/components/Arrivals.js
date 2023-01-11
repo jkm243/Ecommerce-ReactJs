@@ -58,7 +58,7 @@ function Arrivals() {
                                                 <img src={product.image} alt={product.name} />
                                             </Link>
                                             <div className="single-new-arrival-bg-overlay"></div>
-                                            <div className="sale bg-1">
+                                            <div className={"sale " + (product.countInStock === '0' ? 'bg-1' : 'bg-2')}>
                                                 <p>sale</p>
                                             </div>
                                             <div className="new-arrival-cart">

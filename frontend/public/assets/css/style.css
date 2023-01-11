@@ -131,7 +131,7 @@ nav.navbar.bootsnav{
     color: var(--text-grey-up);;
     font-size: 24px;
     font-weight: 500;
-    padding: 45px 0px;
+    padding: 20px 0px;
     text-transform:capitalize;
 }
 .navbar-header a.navbar-brand span{display: inline-block;color:#bfb00a;text-transform:capitalize;}
@@ -152,7 +152,7 @@ nav.navbar.bootsnav ul.nav > li > a {
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-nav.navbar.bootsnav ul.nav > li > a {padding: 48px 25px;}
+nav.navbar.bootsnav ul.nav > li > a {padding: 24px 25px;}
 nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color: #bfb00a;}
 nav.navbar.bootsnav ul.nav > li.active>a {color: #bfb00a;}
 
@@ -187,7 +187,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 }
 .attr-nav > ul > li > a {
     color: var(--text-grey-up);;
-    padding: 44px 15px;
+    padding: 22px 15px;
     font-size: 18px;
     font-weight: 500;
 }
@@ -335,7 +335,7 @@ ul.cart-list > li.total {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 920px;
+    height: 620px !important;
 }
 .welcome-hero-txt h4 {
     color: #998d80;
