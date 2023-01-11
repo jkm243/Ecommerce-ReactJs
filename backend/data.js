@@ -10,7 +10,8 @@ const data = {
             oldPrice:'299',
             brand:'Nike',
             countInStock:'10',
-            rating:'4.5'
+            rating:'4.5',
+            numReviews: '200'
         },
         {
             name:'Nike Air Force Vintage',
@@ -23,6 +24,8 @@ const data = {
             brand:'Nike',
             countInStock:'10',
             rating:'4.5'
+            ,
+            numReviews: '200'
         },
         {
             name:'Air Force One Red',
@@ -35,6 +38,8 @@ const data = {
             brand:'Nike',
             countInStock:'0',
             rating:'4.5'
+            ,
+            numReviews: '200'
         },
         {
             name:'Nike Phylon',
@@ -47,6 +52,8 @@ const data = {
             brand:'Nike',
             countInStock:'10',
             rating:'4.5'
+            ,
+            numReviews: '200'
         },
         {
             name:'Air Max 2015',
@@ -59,6 +66,8 @@ const data = {
             brand:'Nike',
             countInStock:'10',
             rating:'4.5'
+            ,
+            numReviews: '200'
         },
         {
             name:'Air Max King',
@@ -71,6 +80,8 @@ const data = {
             brand:'Nike',
             countInStock:'10',
             rating:'4.5'
+            ,
+            numReviews: '200'
         },
         {
             name:'Air Max Jordan',
@@ -83,6 +94,8 @@ const data = {
             brand:'Nike',
             countInStock:'10',
             rating:'4.5'
+            ,
+            numReviews: '200'
         },
         {
             name:'Nike Red Sneakers',
@@ -95,6 +108,8 @@ const data = {
             brand:'Nike',
             countInStock:'10',
             rating:'4.5'
+            ,
+            numReviews: '200'
         },
         // {
         //     name:'Air Max 2017',

@@ -46,6 +46,9 @@ body{
 .loader{
     color: var(--text-dark);
 }
+.rating span{
+    color: #bfb00a;
+}
 
 a,a:hover,a:active,a:focus{
 	display:inline-block;
