@@ -40,7 +40,7 @@ function Popular() {
                           <div className="populer-products-price">
                             <h4>Sales Start from <span>$99.00</span></h4>
                           </div>
-                          <button className="btn-cart welcome-add-cart populer-products-btn" onClick="window.location.href='#'">
+                          <button className="btn-cart welcome-add-cart populer-products-btn">
                             discover more
                           </button>
                         </div>

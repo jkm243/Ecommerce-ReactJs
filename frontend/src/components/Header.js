@@ -48,11 +48,9 @@ function Header() {
                     <a href="index.html"><span className="lnr lnr-cog"></span></a>
                   </li>
                   <li className="nav-setting">
-                  <Link to="/cart">
-                    <a href="null"  data-toggle="dropdown">
+                    <Link to="/cart" data-toggle="dropdown">
                       <span className="lnr lnr-cart" ></span>
                       <span className="badge badge-bg-1">2</span>
-                     </a>
                     </Link>
                   </li>
                   <li className="nav-setting">
@@ -65,17 +63,17 @@ function Header() {
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                   <i className="fa fa-bars"></i>
                 </button>
-                
+
                 <Link to="/" className="navbar-brand">
-                        Luka.
-                      </Link>
+                  Luka.
+                </Link>
               </div>
               <div className="collapse navbar-collapse menu-ui-design" id="navbar-menu">
                 <ul className="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                   <li >
-                    <Link to="/" className=" scroll active">
-                        Home
-                      </Link>
+                    <Link to="/" className="scroll active">
+                      Home
+                    </Link>
                   </li>
                   <li className="scroll"><a href="#new-arrivals">new arrival</a></li>
                   <li className="scroll"><a href="#feature">features</a></li>

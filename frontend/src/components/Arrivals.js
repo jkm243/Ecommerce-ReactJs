@@ -51,8 +51,8 @@ function Arrivals() {
                         <div className="row">
                             {loading ? (<div className='loader'>Loading...</div>) : error ? (<div className='loader'>Error</div>) : 
                             (products.map((product) => (
-                                <div className="col-md-3 col-sm-4">
-                                    <div className="single-new-arrival key={product.slug}">
+                                <div className="col-md-3 col-sm-4" key={product.slug}>
+                                    <div className="single-new-arrival" >
                                         <div className="single-new-arrival-bg">
                                             <Link to={`/product/${product.slug}`}>
                                                 <img src={product.image} alt={product.name} />

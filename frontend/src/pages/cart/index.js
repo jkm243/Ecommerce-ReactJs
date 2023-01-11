@@ -36,7 +36,7 @@ const Cart = () => {
     </li>
     <li className="total">
       <span>Total: $0.00</span>
-      <button className="btn-cart pull-right" onClick="window.location.href='#'">view cart</button>
+      <button className="btn-cart pull-right">view cart</button>
     </li>
   </ul></div> 
   )

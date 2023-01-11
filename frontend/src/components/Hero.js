@@ -30,11 +30,11 @@ function Hero() {
                               <del>$ 499.00</del>
                             </p>
                           </div>
-                          <button className="btn-cart welcome-add-cart" onClick="window.location.href='#'">
+                          <button className="btn-cart welcome-add-cart" >
                             <span className="lnr lnr-plus-circle"></span>
                             add <span>to</span> cart
                           </button>
-                          <button className="btn-cart welcome-add-cart welcome-more-info" onClick="window.location.href='#'">
+                          <button className="btn-cart welcome-add-cart welcome-more-info" >
                             more info
                           </button>
                         </div>
@@ -73,11 +73,11 @@ function Hero() {
                               <del>$ 299.00</del>
                             </p>
                           </div>
-                          <button className="btn-cart welcome-add-cart" onClick="window.location.href='#'">
+                          <button className="btn-cart welcome-add-cart" >
                             <span className="lnr lnr-plus-circle"></span>
                             add <span>to</span> cart
                           </button>
-                          <button className="btn-cart welcome-add-cart welcome-more-info" onClick="window.location.href='#'">
+                          <button className="btn-cart welcome-add-cart welcome-more-info" >
                             more info
                           </button>
                         </div>
@@ -116,11 +116,11 @@ function Hero() {
                               <del>$ 399.00</del>
                             </p>
                           </div>
-                          <button className="btn-cart welcome-add-cart" onClick="window.location.href='#'">
+                          <button className="btn-cart welcome-add-cart" >
                             <span className="lnr lnr-plus-circle"></span>
                             add <span>to</span> cart
                           </button>
-                          <button className="btn-cart welcome-add-cart welcome-more-info" onClick="window.location.href='#'">
+                          <button className="btn-cart welcome-add-cart welcome-more-info" >
                             more info
                           </button>
                         </div>
