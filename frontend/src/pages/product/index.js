@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useReducer } from 'react'
-// import Rating from '../../components/Rating';
+import Rating from '../../components/Rating';
 import { useParams } from 'react-router-dom'
 
 const reducer = (state, action) => {
@@ -27,6 +27,7 @@ function Product() {
     });
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         const fetchData = async () => {
             dispatch({ type: "FETCH_REQUEST" });
             try {
@@ -65,11 +66,12 @@ function Product() {
                                             {product.description}
                                         </p>
                                         <div className="packages-price">
-                                            <p>
-                                                $ {product.price}
-                                                <del>$ 499.00</del>
-                                            </p>
+                                            <h2>
+                                                ${product.price}
+                                                <del>$ {product.oldPrice}</del>
+                                            </h2>
                                         </div>
+                                        <Rating  rating={product.rating} numReviews={product.numReviews}/>
                                         <button className="btn-cart welcome-add-cart" >
                                             <span className="lnr lnr-plus-circle"></span>
                                             add <span>to</span> cart

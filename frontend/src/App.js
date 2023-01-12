@@ -4,8 +4,11 @@ import Home from './pages/index.js';
 import Header from './components/Header'
 import Cart from './pages/cart/index'
 import Product from './pages/product/index';
+import Footer from './components/Footer';
+import ScrollButton from './components/ScrollButton';
 
 function App() {
+  
   return (
     <Router>
       <Header />
@@ -14,6 +17,8 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/product/:slug" element={<Product/>}/>
       </Routes>
+      <Footer/>
+      <ScrollButton/>
     </Router>
   );
 }
