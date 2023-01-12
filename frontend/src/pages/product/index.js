@@ -6,6 +6,7 @@ import Badge from '../../components/Badge';
 import AddToCartButton from '../../components/AddToCartButton';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../../components/LoadingBox';
+import MessageBox from '../../components/MessageBox';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -46,9 +47,9 @@ function Product() {
 
 
     return (loading ? (
-        <LoadingBox />
+        <LoadingBox className="App carte"/>
     ) : error ? (
-        <div className='App carte'>{error}</div>
+            <MessageBox className="App carte" variant="alert">{error}</MessageBox>
     ) : (
         <div className="carte item active">
             <div className="single-slide-item slide1">
@@ -84,7 +85,6 @@ function Product() {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

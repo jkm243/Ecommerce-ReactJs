@@ -11,7 +11,7 @@ function Footer() {
     <div className='App'>
       <section id="clients" className="clients">
         <div className="container">
-          <div className="owl-carousel owl-theme" id="client">
+          <div className="owl-carousel owl-theme carte" id="client">
             <div className="item">
                 <img src={c1} alt="brand-image1" />
             </div>

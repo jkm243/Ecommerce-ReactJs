@@ -2,8 +2,8 @@ import React from 'react'
 
 function Featured() {
   return (
-    <div className='App'>
-              <section id="feature" className="feature">
+    <div>
+      <section id="feature" className="feature">
         <div className="container">
           <div className="section-header">
             <h2>featured products</h2>

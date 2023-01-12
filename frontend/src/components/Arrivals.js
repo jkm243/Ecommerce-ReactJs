@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import Rating from './Rating';
 import LoadingBox from './LoadingBox';
+import MessageBox from './MessageBox';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -48,7 +49,8 @@ function Arrivals() {
                     </div>
                     <div className="new-arrivals-content">
                         <div className="row">
-                            {loading ? <LoadingBox /> : error ? (<div className='loader'>Error</div>) :
+                            {loading ? (<LoadingBox />) : 
+                                error ? (<MessageBox variant="alert">{error}</MessageBox>) :
                                 (products.map((product) => (
                                     <div className="col-md-3 col-sm-4" key={product.slug}>
                                         <div className="single-new-arrival" >
