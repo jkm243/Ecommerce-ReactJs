@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
-import Cart from '../pages/cart';
 import { Store } from '../Store';
 
 function Header() {
@@ -56,7 +55,7 @@ function Header() {
                     <Link to="/cart" data-toggle="dropdown">
                       <span className="lnr lnr-cart" ></span>
                       {cart.cartItems.length > 0 && (
-                        <span className="badge badge-bg-1">{cart.cartItems.length}</span>
+                        <span className="badge badge-bg-1">{cart.cartItems.reduce((a,c)=>a+c.quantity,0)}</span>
                       )}
                     </Link>
                   </li>
