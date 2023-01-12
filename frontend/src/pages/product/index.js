@@ -51,7 +51,7 @@ function Product() {
     ) : error ? (
             <MessageBox className="App carte" variant="alert">{error}</MessageBox>
     ) : (
-        <div className="carte item active">
+        <div className="item active">
             <div className="single-slide-item slide1">
                 <div className="container">
                     <div className="welcome-hero-content">
