@@ -841,7 +841,7 @@ span.feature-review {margin-left: 10px;}
         9. Clients
 --------------------------------------*/
 .clients {
-    background: var(--text-dark);
+    background: var(--bg-grey-light);
     display: flex;
     align-items: center;
     height: 220px;

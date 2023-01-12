@@ -13,24 +13,16 @@ function Footer() {
         <div className="container">
           <div className="owl-carousel owl-theme" id="client">
             <div className="item">
-              <a href="index.html">
                 <img src={c1} alt="brand-image1" />
-              </a>
             </div>
             <div className="item">
-              <a href="index.html">
                 <img src={c2} alt="brand-image2" />
-              </a>
             </div>
             <div className="item">
-              <a href="index.html">
                 <img src={c3} alt="brand-image3" />
-              </a>
             </div>
             <div className="item">
-              <a href="index.html">
                 <img src={c4} alt="brand-image4" />
-              </a>
             </div>
             <div className="item">  
                 <img src={c5} alt="brand-image5" />
