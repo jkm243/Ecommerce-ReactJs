@@ -71,7 +71,11 @@ p {
     line-height: 1.8;
 }
 .carte{
-    margin-top: 15%;
+    margin-top: 1em;
+}
+.text{
+    color: var(--text-grey-up);
+    padding-top:10px ;
 }
 img{border:none;max-width:100%; height:auto;}
 ul{
@@ -199,7 +203,8 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 /*.attr-nav*/
 
 /*badge*/
-.badge {
+
+.badge-bg-1 {
     background-color: #bfb00a;
     border: 2px solid #bfb00a;
 }
@@ -208,6 +213,12 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     width: 20px;
     height: 20px;
     padding-top: 3px;
+}
+.text-bg-success{
+    background-color: #47d93c;
+}
+.text-bg-danger{
+    background-color: #d93c3c;
 }
 /*.badge*/
 

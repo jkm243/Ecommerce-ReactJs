@@ -2,6 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useReducer } from 'react'
 import Rating from '../../components/Rating';
 import { useParams } from 'react-router-dom'
+import Badge from '../../components/Badge';
+import AddToCartButton from '../../components/AddToCartButton';
+import { Helmet } from 'react-helmet-async';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -46,7 +49,7 @@ function Product() {
     ) : error ? (
         <div className='App carte'>{error}</div>
     ) : (
-        <div className="item active">
+        <div className=" carte item active">
             <div className="single-slide-item slide1">
                 <div className="container">
                     <div className="welcome-hero-content">
@@ -61,7 +64,12 @@ function Product() {
                             <div className="col-sm-5">
                                 <div className="single-welcome-hero">
                                     <div className="welcome-hero-txt">
-                                        <h2>{product.name}</h2>
+                                    <Helmet>
+                                        <title>{product.name}</title>
+                                        </Helmet>
+                                                <h2>{product.name}</h2>
+                                        <Rating  rating={product.rating} numReviews={product.numReviews}/>
+                                        <Badge inStock={product.countInStock}/>
                                         <p>
                                             {product.description}
                                         </p>
@@ -71,11 +79,7 @@ function Product() {
                                                 <del>$ {product.oldPrice}</del>
                                             </h2>
                                         </div>
-                                        <Rating  rating={product.rating} numReviews={product.numReviews}/>
-                                        <button className="btn-cart welcome-add-cart" >
-                                            <span className="lnr lnr-plus-circle"></span>
-                                            add <span>to</span> cart
-                                        </button>
+                                        <AddToCartButton inStock={product.countInStock}/>
                                     </div>
                                 </div>
                             </div>
