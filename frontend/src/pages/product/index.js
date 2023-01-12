@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import Badge from '../../components/Badge';
 import AddToCartButton from '../../components/AddToCartButton';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../../components/LoadingBox';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -45,11 +46,11 @@ function Product() {
 
 
     return (loading ? (
-        <div className='App carte'>Loading....</div>
+        <LoadingBox />
     ) : error ? (
         <div className='App carte'>{error}</div>
     ) : (
-        <div className=" carte item active">
+        <div className="carte item active">
             <div className="single-slide-item slide1">
                 <div className="container">
                     <div className="welcome-hero-content">
