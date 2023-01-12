@@ -1,13 +1,13 @@
 import axios from 'axios';
-import React, { useEffect, useReducer } from 'react'
+import React, { useContext, useEffect, useReducer } from 'react'
 import Rating from '../../components/Rating';
 import { useParams } from 'react-router-dom'
 import Badge from '../../components/Badge';
-import AddToCartButton from '../../components/AddToCartButton';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../../components/LoadingBox';
 import MessageBox from '../../components/MessageBox';
 import { getError } from '../../utils';
+import { Store } from '../../Store';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -46,11 +46,20 @@ function Product() {
         fetchData();
     }, [slug]);
 
+    //Context Add to Cart
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+
+    const addToCartHandler = () => {
+        ctxDispatch({
+            type: 'CART_ADD_ITEM',
+            payload: { ...product, quantity: 1 },
+        });
+    };
 
     return (loading ? (
-        <LoadingBox className="App carte"/>
+        <LoadingBox className="App carte" />
     ) : error ? (
-            <MessageBox className="App carte" variant="alert">{error}</MessageBox>
+        <MessageBox className="App carte" variant="alert">{error}</MessageBox>
     ) : (
         <div className="item active">
             <div className="single-slide-item slide1">
@@ -67,12 +76,12 @@ function Product() {
                             <div className="col-sm-5">
                                 <div className="single-welcome-hero">
                                     <div className="welcome-hero-txt">
-                                    <Helmet>
-                                        <title>{product.name}</title>
+                                        <Helmet>
+                                            <title>{product.name}</title>
                                         </Helmet>
-                                                <h2>{product.name}</h2>
-                                        <Rating  rating={product.rating} numReviews={product.numReviews}/>
-                                        <Badge inStock={product.countInStock}/>
+                                        <h2>{product.name}</h2>
+                                        <Rating rating={product.rating} numReviews={product.numReviews} />
+                                        <Badge inStock={product.countInStock} />
                                         <p>
                                             {product.description}
                                         </p>
@@ -82,7 +91,11 @@ function Product() {
                                                 <del>$ {product.oldPrice}</del>
                                             </h2>
                                         </div>
-                                        <AddToCartButton inStock={product.countInStock}/>
+                                        {product.countInStock > 0 && (
+                                            <button onClick={addToCartHandler} className="btn-cart welcome-add-cart" >
+                                                <span className="lnr lnr-plus-circle"></span>
+                                                add <span>to</span> cart
+                                            </button>)}
                                     </div>
                                 </div>
                             </div>

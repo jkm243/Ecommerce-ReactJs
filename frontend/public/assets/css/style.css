@@ -162,7 +162,7 @@ nav.navbar.bootsnav ul.nav > li > a {
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-nav.navbar.bootsnav ul.nav > li > a {padding: 24px 25px;}
+nav.navbar.bootsnav ul.nav > li > a{padding: 24px 25px;}
 nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color: #bfb00a;}
 nav.navbar.bootsnav ul.nav > li.active>a {color: #bfb00a;}
 
@@ -195,7 +195,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     position: relative;
     top:5px;
 }
-.attr-nav > ul > li > a {
+.attr-nav > ul > li > a , .dark-mode{
     color: var(--text-grey-up);;
     padding: 22px 15px;
     font-size: 18px;

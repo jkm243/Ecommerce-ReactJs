@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
+import Cart from '../pages/cart';
+import { Store } from '../Store';
 
 function Header() {
   const theme = window.localStorage.getItem("theme");
@@ -15,9 +17,12 @@ function Header() {
     } else window.localStorage.setItem("theme", "dark");
   }
 
-  function handleClick(e) {
-    e.preventDefault();
-  }
+  // function handleClick(e) {
+  //   e.preventDefault();
+  // }
+
+  const { state} = useContext(Store); 
+  const { cart } = state;
 
   return (
     <div className="App">
@@ -50,11 +55,13 @@ function Header() {
                   <li className="nav-setting">
                     <Link to="/cart" data-toggle="dropdown">
                       <span className="lnr lnr-cart" ></span>
-                      <span className="badge badge-bg-1">2</span>
+                      {cart.cartItems.length > 0 && (
+                        <span className="badge badge-bg-1">{cart.cartItems.length}</span>
+                      )}
                     </Link>
                   </li>
                   <li className="nav-setting">
-                    <a href='null' onClick={handleClick}><button className="dark-mode-btn" onClick={triggerToggle}>{isClicked ? "🌓" : "☀️"}</button></a>
+                    <button className="dark-mode-btn dark-mode" onClick={triggerToggle}>{isClicked ? "🌓" : "☀️"}</button>
                   </li>
                 </ul>
               </div>
