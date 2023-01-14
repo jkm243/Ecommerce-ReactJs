@@ -73,13 +73,13 @@ function Arrivals() {
                                                     </p>
                                                 </div>
                                             </div>
-                                            
+                                           
                                             <h4>
                                                 <Link to={`/product/${product.slug}`}>
                                                     {product.name}
                                                 </Link>
                                             </h4>
-                                            <Rating rating={product.rating} numReviews={product.numReviews}/>
+                                            <Rating rating={product.rating} numReviews={product.numReviews} />
                                             <p className="arrival-product-price">{product.price}$</p>
                                         </div>
                                     </div>

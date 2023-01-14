@@ -46,8 +46,11 @@ body{
 .loader{
     color: var(--text-dark);
 }
-.rating span{
+.rating{
     color: #bfb00a;
+}
+.reviews{
+    color: var(--text-grey-up);
 }
 
 a,a:hover,a:active,a:focus{
@@ -505,7 +508,7 @@ ul.cart-list > li.total {
     display: inline-block;
     font-size: 18px;
     font-weight: 500;
-    color: #5f5b57;
+    color:var(--text-grey-up);
     margin: 25px 0 22px;
     -webkit-transition: 0.3s linear; 
     -moz-transition: 0.3s linear; 
@@ -663,13 +666,13 @@ p.arrival-review span {margin-right: 15px;}
     bottom:0px;
 }
 .single-new-arrival  h4 a{
-    color:#5f5b57;
+    color:var(--text-grey-up);
     font-size:16px;
     font-weight:500;
     margin:26px 0 12px;
 }
 .arrival-product-price{
-    color:#5f5b57;
+    color:var(--text-grey-up);
     font-size: 16px;
     font-weight: 400;
 }
@@ -752,11 +755,11 @@ span.spacial-feature-icon i {color:  #a9a9a9;}
 span.feature-review {margin-left: 10px;}
 .single-feature-txt p {font-size: 14px;}
 .single-feature-txt h3 a ,.single-blog-txt h2 a{
-    color: #5f5b57;
+    color:var(--text-grey-up);
     margin: 10px 0px 15px;
 }
 .single-feature-txt h5 {
-    color:  #5f5b57;
+    color:var(--text-grey-up);
     font-weight:  400;
 }
 /*.single-feature-txt */
