@@ -42,7 +42,6 @@ function Header() {
 
 
             <div className="container">
-
               <div className="attr-nav">
                 <ul>
                   <li className="search">
@@ -55,7 +54,8 @@ function Header() {
                     <Link to="/cart" data-toggle="dropdown">
                       <span className="lnr lnr-cart" ></span>
                       {cart.cartItems.length > 0 && (
-                        <span className="badge badge-bg-1">{cart.cartItems.reduce((a,c)=>a+c.quantity,0)}</span>
+                        <span className="badge badge-bg-1">
+                        {cart.cartItems.reduce((a,c)=>a+c.quantity,0)}</span>
                       )}
                     </Link>
                   </li>

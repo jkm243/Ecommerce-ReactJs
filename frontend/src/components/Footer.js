@@ -117,7 +117,7 @@ function Footer() {
               <a href="https://www.instagram.com/accounts/login/?next=%2Fjacques_katsuva%2F&source=omni_redirect"><i className="fa fa-instagram"></i></a>
               <a href="https://twitter.com/jacqueskatsuva"><i className="fa fa-twitter"></i></a>
               <a href="https://github.com/jkm243/"><i className="fa fa-github-square"></i></a>
-              <a href="https://www.jkmconception.com"><i class="fa fa-pencil"></i></a>
+              <a href="https://www.jkmconception.com"><i className="fa fa-pencil"></i></a>
               <a href="https://www.jacqueskatsuva.com"><i className="fa fa-code"></i></a>
             </div>
             <p>
