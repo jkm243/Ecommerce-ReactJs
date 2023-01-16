@@ -31,6 +31,8 @@ function Hero() {
             try {
                 const result = await axios.get("/api/products");
                 dispatch({ type: "FETCH_SUCCESS", payload: result.data });
+              let productNum = Math.floor(Math.random() * result.length);
+              let randomProduct = result[productNum];
             } catch (err) {
                 dispatch({ type: "FETCH_FAIL", payload: err.message });
             }
@@ -38,14 +40,14 @@ function Hero() {
         fetchData();
     }, []);
 
-    products.filter(product => product.vitrine).map((product) => (console.log(product)));
+  // products.filter(product => Math.floor(Math.random() * product.length).map((product) => (console.log(product))));
 
     return (
         loading ? (
             <LoadingBox className="App carte" />
         ) : error ? (
             <MessageBox className="App carte" variant="alert">{error}</MessageBox>
-        ) : (products.filter(product => product.vitrine).map((product) => (
+        ) : (products.filter(product => Math.floor(Math.random() * product.length)).map((product) => (
             <div className="App">
                 <div id="header-carousel" className="carousel slide carousel-fade" data-ride="carousel">
                     <ol className="carousel-indicators">

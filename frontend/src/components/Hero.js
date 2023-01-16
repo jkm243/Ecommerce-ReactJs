@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 //import data from '../pages/data'
 
 function Hero() {
@@ -30,13 +31,17 @@ function Hero() {
                               <del>$ 499.00</del>
                             </p>
                           </div>
-                          <button className="btn-cart welcome-add-cart" >
-                            <span className="lnr lnr-plus-circle"></span>
-                            add <span>to</span> cart
-                          </button>
-                          <button className="btn-cart welcome-add-cart welcome-more-info" >
-                            more info
-                          </button>
+                          <Link to="/product/nike-air-force-vintage">
+                            <button className="btn-cart welcome-add-cart" >
+                              <span className="lnr lnr-plus-circle"></span>
+                              add <span>to</span> cart
+                            </button>
+                          </Link>
+                          <Link to="/product/nike-air-force-vintage">
+                            <button className="btn-cart welcome-add-cart welcome-more-info" >
+                              more info
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -73,13 +78,17 @@ function Hero() {
                               <del>$ 299.00</del>
                             </p>
                           </div>
-                          <button className="btn-cart welcome-add-cart" >
-                            <span className="lnr lnr-plus-circle"></span>
-                            add <span>to</span> cart
-                          </button>
-                          <button className="btn-cart welcome-add-cart welcome-more-info" >
-                            more info
-                          </button>
+                          <Link to="/product/air-force-one-red">
+                            <button className="btn-cart welcome-add-cart" >
+                              <span className="lnr lnr-plus-circle"></span>
+                              add <span>to</span> cart
+                            </button>
+                          </Link>
+                          <Link to="/product/air-force-one-red">
+                            <button className="btn-cart welcome-add-cart welcome-more-info" >
+                              more info
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -116,13 +125,17 @@ function Hero() {
                               <del>$ 399.00</del>
                             </p>
                           </div>
-                          <button className="btn-cart welcome-add-cart" >
-                            <span className="lnr lnr-plus-circle"></span>
-                            add <span>to</span> cart
-                          </button>
+                          <Link to="/product/air-max-2015-blue">
+                            <button className="btn-cart welcome-add-cart" >
+                              <span className="lnr lnr-plus-circle"></span>
+                              add <span>to</span> cart
+                            </button>
+                          </Link>
+                          <Link to="/product/air-max-2015-blue">
                           <button className="btn-cart welcome-add-cart welcome-more-info" >
                             more info
                           </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
