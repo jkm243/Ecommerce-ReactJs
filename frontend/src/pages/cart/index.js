@@ -1,45 +1,70 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import MessageBox from '../../components/MessageBox';
+import { Store } from '../../Store'
 
 const Cart = () => {
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const {
+    cart: { cartItems }, } = state;
   return (
-    <div className='App carte'>                     
-    <ul className="cart-list s-cate">
-    <li className="single-cart-list">
-      <a href="index.html" className="photo"><img src="assets/images/arrivals1.png" className="cart-thumb" alt="image3" /></a>
-      <div className="cart-list-txt">
-        <h6><a href="index.html">arm <br /> chair</a></h6>
-        <p>1 x - <span className="price">$180.00</span></p>
+    <div className='App carte mt-5'>
+      <Helmet>
+        <title>Luka - Shopping Cart</title>
+      </Helmet>
+      {cartItems.length === 0 ? (
+        <MessageBox>
+          Cart is empty.
+          <Link to="/">
+            Go Shopping
+          </Link>
+        </MessageBox>
+      ) : (<div>
+        {cartItems.map((item) => (
+          <ul className="cart-list s-cate">
+            <li className="single-cart-list" key={item._id}>
+              <a href="index.html" className="photo"><img src={item.image} className="cart-thumb" alt={item.name} /></a>
+              <div className="cart-list-txt">
+                <h6>
+                <Link to={`/product/${item.slug}`}>
+                  {item.name}
+                </Link>
+                </h6> 
+                <div> <br></br>
+                <button disabled={item.quantity === 1} className="plus">
+                  <i className="fa fa-minus-circle"></i>
+                </button>
+                  {item.quantity} x   
+                <span className="price">${item.price}</span>
+                  <button disabled={item.quantity === item.countInStock} className="minus">
+                    <i className="fa fa-plus-circle"></i>
+                  </button>
+                </div>
+              </div>
+              <div className="cart-close">
+                <span className="lnr lnr-cross"></span>
+              </div>
+            </li>
+            
+          </ul>))}
+          <div className="cart-list s-cate">
+            <p className="total">
+              <span>Element: {cartItems.reduce((a,c)=> a+c.quantity,0)}{' '} (items)</span> 
+            </p>
+            <h4 className="total">
+              <span>Total: ${cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}</span>
+              <ul className='cart-list s-cate'>
+                <li className="total">
+                  <button className="btn-cart welcome-add-cart" disabled={cartItems.length===0}>Proceed to Checkout</button>
+                </li>
+              </ul>
+            </h4>
+            
+          </div>
       </div>
-      <div className="cart-close">
-        <span className="lnr lnr-cross"></span>
-      </div>
-    </li>
-    <li className="single-cart-list">
-      <a href="index.html" className="photo"><img src="assets/images/arrivals2.png" className="cart-thumb" alt="image1" /></a>
-      <div className="cart-list-txt">
-        <h6><a href="index.html">single <br /> armchair</a></h6>
-        <p>1 x - <span className="price">$180.00</span></p>
-      </div>
-      <div className="cart-close">
-        <span className="lnr lnr-cross"></span>
-      </div>
-    </li>
-    <li className="single-cart-list">
-      <a href="index.html" className="photo"><img src="assets/images/arrivals3.png" className="cart-thumb" alt="image2" /></a>
-      <div className="cart-list-txt">
-        <h6><a href="index.html">wooden arn <br /> chair</a></h6>
-        <p>1 x - <span className="price">$180.00</span></p>
-      </div>
-      <div className="cart-close">
-        <span className="lnr lnr-cross"></span>
-      </div>
-    </li>
-    <li className="total">
-      <span>Total: $0.00</span>
-      <button className="btn-cart pull-right">view cart</button>
-    </li>
-  </ul></div> 
-  )
-}
+      )
+      }</div>
+)};
 
-export default Cart
+export default Cart;

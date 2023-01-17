@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useReducer } from 'react'
 import Rating from '../../components/Rating';
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Badge from '../../components/Badge';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../../components/LoadingBox';
@@ -23,6 +23,7 @@ const reducer = (state, action) => {
 };
 
 function Product() {
+    const navigate = useNavigate();
     const params = useParams();
     const { slug } = params;
 
@@ -54,6 +55,7 @@ function Product() {
             type: 'CART_ADD_ITEM',
             payload: { ...product, quantity: 1 },
         });
+        navigate('/cart')
     };
 
 
