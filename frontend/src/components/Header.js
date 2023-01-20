@@ -75,7 +75,7 @@ function Header() {
                 </Link>
               </div>
               <div className="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                <ul className="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                {/* <ul className="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                   <li >
                     <Link to="/" className="scroll active">
                       Home
@@ -85,7 +85,7 @@ function Header() {
                   <li className="scroll"><a href="#feature">features</a></li>
                   <li className="scroll"><a href="#blog">blog</a></li>
                   <li className="scroll"><a href="#newsletter">contact</a></li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           </nav>

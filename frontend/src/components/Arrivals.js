@@ -1,10 +1,11 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useContext, useEffect, useReducer } from 'react'
 // import data from '../pages/data'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import Rating from './Rating';
 import LoadingBox from './LoadingBox';
 import MessageBox from './MessageBox';
+import { Store } from '../Store';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -26,6 +27,22 @@ function Arrivals() {
         loading: true,
         error: "",
     });
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const {
+        cart: { cartItems }, } = state;
+    const addToCartHandler = async (item) => {
+        const { data } = await axios.get(`/api/products/${item._id}`)
+        const existItem = cartItems.find((x)=>x._id === products._id);
+        const quantity = existItem ? existItem.quantity + 1 : 1;
+        if (data.countInStock < quantity) {
+            window.alert('Sorry. Product is out of stock');
+            return;
+        }
+        ctxDispatch({
+            type: 'CART_ADD_ITEM',
+            payload: { ...item, quantity },
+        });
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -66,7 +83,7 @@ function Arrivals() {
                                                 <div className="new-arrival-cart">
                                                     <p>
                                                         <span className="lnr lnr-cart"></span>
-                                                        <a href="index.html">add <span>to </span> cart</a>
+                                                        {product.countInStock === 0 ? (<button> Out of Stock</button>) : (<button onClick={() => addToCartHandler(product)}>add <span>to </span> cart</button>)}                                               
                                                     </p>
                                                     <p className="arrival-review pull-right">
                                                         <span className="lnr lnr-heart"></span>

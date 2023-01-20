@@ -49,7 +49,7 @@ const data = {
         },
         {
             _id: '4',
-            name:'Nike Phylon',
+            name:'Nike Phylon 2021',
             slug:'nike-phylon',
             category:'shoes',
             image:'assets/images/phylon.png',
@@ -122,9 +122,9 @@ const data = {
             oldPrice:'299',
             brand:'Nike',
             countInStock:'10',
-            rating:'4.5'
+            rating:'3'
             ,
-            numReviews: '200',
+            numReviews: '100',
             vitrine: false
         }
     ],

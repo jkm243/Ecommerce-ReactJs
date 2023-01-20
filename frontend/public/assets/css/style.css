@@ -52,6 +52,12 @@ body{
 .reviews{
     color: var(--text-grey-up);
 }
+.shop{
+    color: var(--text-dark);
+}
+.shop:hover{
+    color: #bfb00a;
+}
 
 a,a:hover,a:active,a:focus{
 	display:inline-block;
@@ -154,7 +160,7 @@ nav.navbar.bootsnav{
 /*.navbar-brand*/
 
 /*.nav li*/
-nav.navbar.bootsnav ul.nav > li > a {
+nav.navbar.bootsnav ul.nav > li > a, .dark-mode {
     color: var(--text-grey-up);;
     font-size: 16px;
     font-weight: 500;
@@ -301,8 +307,13 @@ ul.cart-list > li.total > span {
     position: relative;
     top: 4px;
 }
+.test2{
+    margin-bottom: 5px;
+    border: 1px solid var(--text-dark);
+    border-radius: 10px;
+}
 ul.cart-list > li.total span {
-    color: var(--bg-blue-dark);
+    color: var(--text-dark);
     font-size: 14px;
     font-weight: 500;
 }
