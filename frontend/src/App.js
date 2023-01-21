@@ -6,6 +6,7 @@ import Cart from './pages/cart/index'
 import Product from './pages/product/index';
 import Footer from './components/Footer';
 import ScrollButton from './components/ScrollButton';
+import SignIn from './pages/signin/index';
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/product/:slug" element={<Product/>}/>
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
       <Footer/>
       <ScrollButton/>
