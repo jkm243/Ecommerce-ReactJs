@@ -14,7 +14,7 @@ function Hero() {
         <div className="carousel-inner" role="listbox">
           <div className="item active">
             <div className="single-slide-item slide1">
-              <div className="container">
+              <div className="container fadeInDown">
                 <div className="welcome-hero-content">
                   <div className="row">
                     <div className="col-sm-7">

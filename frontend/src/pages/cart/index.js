@@ -28,7 +28,7 @@ const Cart = () => {
     })
   }
   const checkoutHandler = ()=>{
-    navigate('/sign?redirect=/shipping')
+    navigate('/signin?redirect=/shipping')
   }
   return (
     <div className='carte mt-5'>

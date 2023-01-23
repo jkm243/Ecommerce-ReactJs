@@ -7,6 +7,7 @@ import Product from './pages/product/index';
 import Footer from './components/Footer';
 import ScrollButton from './components/ScrollButton';
 import SignIn from './pages/signin/index';
+import SignUp from './pages/signup';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/product/:slug" element={<Product/>}/>
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer/>
       <ScrollButton/>
