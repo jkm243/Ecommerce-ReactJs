@@ -1,12 +1,13 @@
 import React from 'react'
+import logo from '../../assets/logo.png'
 
 const SignUp = () => {
   return (
-    <div className='bod1'>
-          <div class="container-form fadeInDown">
-              <div class="bg-img"></div>
-              <div class="content">
-                  <form>
+    <div className='bod'>
+          <div class="container-form2 fadeInDown">
+              <div class="bg-img2"></div>
+              <div class="content2">
+                  <form className='frm'>
                       <div class="fadeIn first">
                           <input type="text" name="firstname" placeholder="First name" id="firstname" />
                           <input type="text" name="name" placeholder="Last name" id="name" />
@@ -30,7 +31,7 @@ const SignUp = () => {
                       <button class="fadeIn second">Sign Up</button>
                   </form>
                   <p class="fadeIn third question">Do you have an account? <a href="index.html">Sign in now</a></p>
-                  {/* <img class="fadeIn fourth" src="./img/Netflix_logo.png" width="100" align="center" /> */}
+                  <img class="fadeIn fourth" src={logo} width="100" align="center" />
               </div>
           </div>
           <div className="banner_fadeBottom"></div>
