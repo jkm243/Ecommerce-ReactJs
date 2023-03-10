@@ -10,6 +10,7 @@ const Cart = () => {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
     cart: { cartItems }, } = state;
+    
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(`/api/products/${item._id}`)
     if (data.countInStock < quantity) {
@@ -85,7 +86,7 @@ const Cart = () => {
                         {item.quantity} x
                         <span className="price">${item.price}</span>{' '}
                         <button disabled={item.quantity === item.countInStock}
-                          onClick={() => updateCartHandler(item, item.quantity + 1)}
+                          onClick={() => updateCartHandler(item, item.quantity + 2)}
                           className="minus">
                           <i className="fa fa-plus-circle"></i>
                         </button>

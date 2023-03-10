@@ -1,4 +1,5 @@
-import React from 'react'
+import { Axios } from 'axios';
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async';
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/logo.png'
@@ -6,29 +7,45 @@ import logo from '../../assets/logo.png'
 const SignIn = () => {
     const {search}=useLocation();
     const redirectInUrl = new URLSearchParams(search).get('redirect');
-    const redirect = redirectInUrl ? redirectInUrl : '/'
+    const redirect = redirectInUrl ? redirectInUrl : '/';
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const submitHandler = async(e) => {
+        e.preventDefault();
+        try {
+            const { data } = await Axios.post('/api/users/signin', {
+                email,
+                password,
+            });
+            console.log(data);
+        } catch (err) {
+            console.log("error");
+        }
+    }
     return (
         <div className='bod'>
             <Helmet>
                 <title>Sign In</title>
             </Helmet>
-            <div class="container-form fadeInDown">
-                <div class="bg-img"></div>
-                <div class="content">
-                    <form>
+            <div className="container-form fadeInDown">
+                <div className="bg-img"></div>
+                <div className="content">
+                    <form onSubmit={submitHandler}>
                         <div>
-                            <input type="email" class="fadeIn first" name="email" placeholder="Email" id="email" />
-                            <input type="password" class="fadeIn second" name="password" placeholder="Password" id="password" />
+                            <input onChange={(e)=> setEmail(e.target.value)} type="email" className="fadeIn first" name="email" placeholder="Email" id="email" />
+                            <input onChange={(e) => setPassword(e.target.value)} type="password" className="fadeIn second" name="password" placeholder="Password" id="password" autoComplete='username'/>
                         </div>
                         {/* <!-- Verification --> */}
                         <div id="message2">dfh</div>
                         {/* <!-- End verification --> */}
-                        <button class="fadeIn third">Sign in</button>
+                        <button type='submit' className="fadeIn third bt">Sign in</button>
                     </form>
-                <p class="fadeIn fourth">New to Netflix? {' '}
+                <p className="fadeIn fourth">New to Netflix? {' '}
                     <Link to={`/signup?redirect=${redirect}`}>Sign up now</Link>
                     </p>
-                    <img class="fadeIn fourth" src={logo} width="100" align="center" alt='img-form' />
+                    <img className="fadeIn fourth" src={logo} width="100" align="center" alt='img-form' />
                 </div>
             </div>
             <div className="banner_fadeBottom"></div></div>

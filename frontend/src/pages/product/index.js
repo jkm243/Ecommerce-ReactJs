@@ -23,8 +23,8 @@ const reducer = (state, action) => {
 };
 
 function Product() {
-    const navigate = useNavigate();
     const params = useParams();
+    const navigate = useNavigate();
     const { slug } = params;
 
     const [{ loading, error, product }, dispatch] = useReducer(reducer, {
@@ -48,15 +48,23 @@ function Product() {
     }, [slug]);
 
     //Context Add to Cart
-    const { state, dispatch: ctxDispatch } = useContext(Store);
-
-    const addToCartHandler = () => {
+    const { dispatch: ctxDispatch } = useContext(Store);
+    // const {
+    //     cart: { cartItems }, } = state;
+    const addToCartHandler = async (item) => {
+        // const existItem = cartItems.find((x) => x._id === product._id);
+        // const quantity = existItem ? existItem.quantity + 1 : 1;
+        // const { data } = await axios.get(`/api/products/${item._id}`)
+        // if (data.countInStock < quantity) {
+        //     window.alert('Sorry. Product is out of stock');
+        //     return;
+        // }
         ctxDispatch({
             type: 'CART_ADD_ITEM',
-            payload: { ...product, quantity: 1 },
+            payload: { ...item, quantity: 1 },
         });
         navigate('/cart')
-    };
+    }
 
 
     
@@ -95,8 +103,11 @@ function Product() {
                                                 <del>$ {product.oldPrice}</del>
                                             </h2>
                                         </div>
-                                        {product.countInStock > 0 && (
-                                            <button onClick={addToCartHandler} className="btn-cart welcome-add-cart" >
+                                                {product.countInStock === 0 ? (<button disabled className="btn-cart welcome-add-cart" >
+                                                    <span className="lnr lnr-plus-circle"></span>
+                                                    Out <span>of</span> stock
+                                                </button>) : (
+                                            <button onClick={()=> addToCartHandler(product)} className="btn-cart welcome-add-cart" >
                                                 <span className="lnr lnr-plus-circle"></span>
                                                 add <span>to</span> cart
                                             </button>)}
