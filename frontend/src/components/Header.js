@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Store } from '../Store';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { LinkContainer } from 'react-router-bootstrap';
 
 function Header() {
   const theme = window.localStorage.getItem("theme");
@@ -16,15 +18,19 @@ function Header() {
     } else window.localStorage.setItem("theme", "dark");
   }
 
-  // function handleClick(e) {
-  //   e.preventDefault();
-  // }
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cart,userInfo } = state;
 
-  const { state} = useContext(Store); 
-  const { cart } = state;
+  const signoutHandler = () => {
+    ctxDispatch({ type: 'USER_SIGNOUT' });
+    localStorage.removeItem('userInfo');
+    localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
+    window.location.href = '/signin';
+  };
 
   return (
-    <div className="App">
+    <div>
       <div className="top-area">
         <div className="header-area">
 
@@ -44,12 +50,12 @@ function Header() {
             <div className="container">
               <div className="attr-nav">
                 <ul>
-                  <li className="search">
+                  {/* <li className="search">
                     <a href="index.html"><span className="lnr lnr-magnifier"></span></a>
                   </li>
                   <li className="nav-setting">
                     <a href="index.html"><span className="lnr lnr-cog"></span></a>
-                  </li>
+                  </li> */}
                   <li className="nav-setting">
                     <Link to="/cart" data-toggle="dropdown">
                       <span className="lnr lnr-cart" ></span>
@@ -59,8 +65,31 @@ function Header() {
                       )}
                     </Link>
                   </li>
+                  <li>
+                    {userInfo ? (
+                       <li class="dropdown username">
+                        <a class="dropdown-toggle" data-bs-toggle="dropdown" href="/shipping" role="button" aria-expanded="false">{userInfo.name}</a>
+                        <ul class="dropdown-menu">
+                            <li><Link to="/profile">
+                          <NavDropdown.Item>Profile</NavDropdown.Item>
+                        </Link></li>
+                            <li><Link to="/orderhistory">
+                          <NavDropdown.Item>Order History</NavDropdown.Item>
+                        </Link></li>                            
+                            <li><hr class="dropdown-divider"></hr></li>
+                            <li><Link
+                          className="dropdown-item"
+                          to="#signout"
+                          onClick={signoutHandler}
+                        >
+                          Sign Out
+                        </Link></li>
+                          </ul>
+                        </li>                      
+                    ) : (<Link className="nav-setting" to="/signin">Sign In</Link>)}
+                  </li>
                   <li className="nav-setting">
-                    <button className="dark-mode-btn dark-mode" onClick={triggerToggle}>{isClicked ? "🌓" : "☀️"}</button>
+                    <button className="dark-mode-btn dark-mode" onClick={triggerToggle}><span>{isClicked ? "🌓" : "☀️"}</span></button>
                   </li>
                 </ul>
               </div>

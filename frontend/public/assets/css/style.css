@@ -130,6 +130,9 @@ html,body{height: 100%;}
 /*-------------------------------------
         2. Top-area
 --------------------------------------*/
+.username{
+    padding-top: 1.3vh;
+}
 nav.navbar.bootsnav{
     margin-bottom: 0;
     -moz-border-radius: 0px;
@@ -148,7 +151,7 @@ nav.navbar.bootsnav{
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
     display: inline-block;
     color: var(--text-grey-up);;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 500;
     padding: 20px 0px;
     text-transform:capitalize;

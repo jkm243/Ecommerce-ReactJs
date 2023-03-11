@@ -30,6 +30,7 @@ function Arrivals() {
     const { state, dispatch: ctxDispatch } = useContext(Store);
     const {
         cart: { cartItems }, } = state;
+        
     const addToCartHandler = async (item) => {
         const { data } = await axios.get(`/api/products/${item._id}`)
         const existItem = cartItems.find((x)=>x._id === products._id);
