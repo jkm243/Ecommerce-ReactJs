@@ -8,7 +8,8 @@ import { useContext, useEffect, useState } from 'react';
 import { Store } from '../../Store';
 import { toast } from 'react-toastify';
 import { getError } from '../../utils';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
+import { ToastContainer } from 'react-toastify';
 
 export default function SigninScreen() {
     const navigate = useNavigate();
@@ -44,6 +45,7 @@ export default function SigninScreen() {
 
     return (
         <Container className="small-container">
+            <ToastContainer position="bottom-center" limit={1} />
             <div className='bod'>
                 <Helmet>
                     <title>Sign In</title>

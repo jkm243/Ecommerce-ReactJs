@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Store } from '../Store';
+import 'react-toastify/dist/ReactToastify.css';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { LinkContainer } from 'react-router-bootstrap';
+import { toast, ToastContainer } from 'react-toastify';
 
 function Header() {
   const theme = window.localStorage.getItem("theme");
@@ -31,6 +32,7 @@ function Header() {
 
   return (
     <div>
+      <ToastContainer position="bottom-center" limit={1} />
       <div className="top-area">
         <div className="header-area">
 
