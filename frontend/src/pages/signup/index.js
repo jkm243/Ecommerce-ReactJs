@@ -1,42 +1,83 @@
-import React from 'react'
-import logo from '../../assets/logo.png'
+import Axios from 'axios';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import { Helmet } from 'react-helmet-async';
+import { useContext, useEffect, useState } from 'react';
+import { Store } from '../../Store';
+import { toast } from 'react-toastify';
+import { getError } from '../../utils';
+import logo from '../../assets/logo.png';
+import { ToastContainer } from 'react-toastify';
 
-const SignUp = () => {
-  return (
-    <div className='bod'>
-          <div class="container-form2 fadeInDown">
-              <div class="bg-img2"></div>
-              <div class="content2">
-                  <form className='frm'>
-                      <div class="fadeIn first">
-                          <input type="text" name="firstname" placeholder="First name" id="firstname" />
-                          <input type="text" name="name" placeholder="Last name" id="name" />
-                          <input type="tel" name="tel" placeholder="Telephone" id="telephone" />
-                          <input type="email" name="email" placeholder="Email" id="email" />
-                          <input type="password" name="password" placeholder="Password" id="password" />
+export default function SigninScreen() {
+    const navigate = useNavigate();
+    const { search } = useLocation();
+    const redirectInUrl = new URLSearchParams(search).get('redirect');
+    const redirect = redirectInUrl ? redirectInUrl : '/';
 
-                          {/* <!-- Verification --> */}
-                          <div id="message2">dfh</div>
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
-                          <div id="message">
-                              <h6>Le mot de passe doit contenir:</h6>
-                              <p id="letter" class="invalid">Une lettre <b>minuscule</b></p>
-                              <p id="capital" class="invalid">Une lettre <b>majuscule</b></p>
-                              <p id="number" class="invalid">Un <b>chiffre</b></p>
-                              <p id="length" class="invalid">Au minimum<b> 8 caractères</b></p>
-                          </div>
-                          {/* <!-- End Verification --> */}
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const { userInfo } = state;
+    const submitHandler = async (e) => {
+        e.preventDefault();
+        if (password !== confirmPassword) {
+            toast.error('Passwords do not match');
+            return;
+        }
+        try {
+            const { data } = await Axios.post('/api/users/signup', {
+                name,
+                email,
+                password,
+            });
+            ctxDispatch({ type: 'USER_SIGNIN', payload: data });
+            localStorage.setItem('userInfo', JSON.stringify(data));
+            navigate(redirect || '/');
+        } catch (err) {
+            toast.error(getError(err));
+        }
+    };
 
-                      </div>
-                      <button class="fadeIn second">Sign Up</button>
-                  </form>
-                  <p class="fadeIn third question">Do you have an account? <a href="index.html">Sign in now</a></p>
-                  <img class="fadeIn fourth" src={logo} width="100" align="center" />
-              </div>
-          </div>
-          <div className="banner_fadeBottom"></div>
-    </div>
-  )
+    useEffect(() => {
+        if (userInfo) {
+            navigate(redirect);
+        }
+    }, [navigate, redirect, userInfo]);
+
+    return (
+        <Container className="small-container">
+            <ToastContainer position="bottom-center" limit={1} />
+            <div className='bod'>
+                <Helmet>
+                    <title>Sign Up</title>
+                </Helmet>
+                <div className="container-form fadeInDown">
+                    <div className="bg-img"></div>
+                    <div className="content2">
+                        <form onSubmit={submitHandler}>
+                            <div>
+                                <input onChange={(e) => setName(e.target.value)} type="name" className="fadeIn first" name="name" placeholder="Name" id="name" />
+
+                                <input onChange={(e) => setEmail(e.target.value)} type="email" className="fadeIn first" name="email" placeholder="Email" id="email" />
+                            </div>
+                            <div>
+                                <input onChange={(e) => setPassword(e.target.value)} type="password" className="fadeIn second" name="password" placeholder="Password" id="password" autoComplete='username' />
+
+                                <input onChange={(e) => setConfirmPassword(e.target.value)} type="password" className="fadeIn second" name="confirmpassword" placeholder="Confirm password" id="confirmpassword" autoComplete='username' />
+                            </div>
+                            <button type='submit' className="fadeIn third bt">Sign in</button>
+                        </form>
+                        <p className="fadeIn fourth">New to Netflix? {' '}
+                            <Link to={`/signup?redirect=${redirect}`}>Sign up now</Link>
+                        </p>
+                        <img className="fadeIn fourth" src={logo} width="100" align="center" alt='img-form' />
+                    </div>
+                </div>
+                <div className="banner_fadeBottom"></div></div>
+        </Container>
+    );
 }
-
-export default SignUp

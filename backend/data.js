@@ -138,7 +138,7 @@ const data = {
             oldPrice:'299',
             brand:'Nike',
             countInStock:'10',
-            rating:'3'
+            rating:'4'
             ,
             numReviews: '100',
             vitrine: false

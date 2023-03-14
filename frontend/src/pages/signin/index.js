@@ -1,8 +1,6 @@
 import Axios from 'axios';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import { Helmet } from 'react-helmet-async';
 import { useContext, useEffect, useState } from 'react';
 import { Store } from '../../Store';
@@ -58,9 +56,6 @@ export default function SigninScreen() {
                                 <input onChange={(e) => setEmail(e.target.value)} type="email" className="fadeIn first" name="email" placeholder="Email" id="email" />
                                 <input onChange={(e) => setPassword(e.target.value)} type="password" className="fadeIn second" name="password" placeholder="Password" id="password" autoComplete='username' />
                             </div>
-                            {/* <!-- Verification --> */}
-                            <div id="message2">dfh</div>
-                            {/* <!-- End verification --> */}
                             <button type='submit' className="fadeIn third bt">Sign in</button>
                         </form>
                         <p className="fadeIn fourth">New to Netflix? {' '}

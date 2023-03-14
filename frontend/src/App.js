@@ -8,6 +8,9 @@ import Footer from './components/Footer';
 import ScrollButton from './components/ScrollButton';
 import SignIn from './pages/signin/index';
 import SignUp from './pages/signup';
+import ShippingAddressScreen from './pages/shippingAdress';
+import PaymentMethod from './pages/paymentMethod';
+import PlaceOrderScreen from './pages/placeOrder';
 
 function App() {
   
@@ -21,6 +24,9 @@ function App() {
         <Route path="/product/:slug" element={<Product/>}/>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/shipping" element={<ShippingAddressScreen />} />
+        <Route path="/payment" element={<PaymentMethod />} />
+        <Route path="/placeorder" element={<PlaceOrderScreen />} />
       </Routes>
       <Footer/>
       <ScrollButton/>
