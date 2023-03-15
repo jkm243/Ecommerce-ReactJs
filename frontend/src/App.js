@@ -11,6 +11,8 @@ import SignUp from './pages/signup';
 import ShippingAddressScreen from './pages/shippingAdress';
 import PaymentMethod from './pages/paymentMethod';
 import PlaceOrderScreen from './pages/placeOrder';
+import OrderScreen from './pages/orderScreen';
+import OrderHistoryScreen from './pages/orderHistory';
 
 function App() {
   
@@ -27,6 +29,8 @@ function App() {
         <Route path="/shipping" element={<ShippingAddressScreen />} />
         <Route path="/payment" element={<PaymentMethod />} />
         <Route path="/placeorder" element={<PlaceOrderScreen />} />
+        <Route path="/order/:id" element={<OrderScreen />} />
+        <Route path="/orderhistory" element={<OrderHistoryScreen />} />
       </Routes>
       <Footer/>
       <ScrollButton/>

@@ -69,7 +69,7 @@ function Header() {
                   </li>
                   <>
                     {userInfo ? (
-                       <li className="dropdown username">
+                       <li className="dropdown">
                         <a className="dropdown-toggle" data-bs-toggle="dropdown" href="/shipping" role="button" aria-expanded="false">{userInfo.name}</a>
                         <ul className="dropdown-menu">
                             <li><Link to="/profile">
@@ -81,17 +81,17 @@ function Header() {
                             <li><hr class="dropdown-divider"></hr></li>
                             <li><Link
                           className="dropdown-item"
-                          to="#signout"
+                          to="/signout"
                           onClick={signoutHandler}
                         >
                           Sign Out
                         </Link></li>
                           </ul>
                         </li>                      
-                    ) : (<Link className="nav-setting" to="/signin">Sign In</Link>)}
+                    ) : (<li><Link className="nav-setting" to="/signin">Sign In</Link></li>)}
                   </>
                   <li className="nav-setting">
-                    <button className="dark-mode-btn dark-mode" onClick={triggerToggle}><span>{isClicked ? "🌓" : "☀️"}</span></button>
+                    <button className="dark-mode-btn dark-mode" onClick={triggerToggle}>{isClicked ? "🌓" : "☀️"}</button>
                   </li>
                 </ul>
               </div>

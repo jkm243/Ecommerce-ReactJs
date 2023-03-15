@@ -10,15 +10,15 @@ import Testimonials from '../components/Testimonials.js'
 function Home() {
   return (
     <>
-    <Helmet>
-      <title>Luka - Shoes Shopping</title>
-    </Helmet>
-        <Hero/>
-        <Popular/>
-        <Arrivals/>
-        <Featured/>
-        <Offer/>
-        <Testimonials/>
+      <Helmet>
+        <title>Luka - Shoes Shopping</title>
+      </Helmet>
+      <Hero />
+      <Popular />
+      <Arrivals />
+      <Featured />
+      <Offer />
+      <Testimonials />
     </>
   )
 }

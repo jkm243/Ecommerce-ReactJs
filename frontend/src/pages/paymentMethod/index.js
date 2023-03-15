@@ -29,42 +29,42 @@ export default function PaymentMethod() {
         navigate('/placeorder');
     };
     return (
-            <div className="container fadeInDown">
-                <Helmet>
-                    <title>Payment Method</title>
-                </Helmet>
-                    <CheckoutSteps step1 step2 step3></CheckoutSteps>
-                <div className="ship container small-container">
-                    <h1 className="my-3 title">Payment Method</h1>
-                    <Form onSubmit={submitHandler}>
-                        <div className="mb-3">
-                            <Form.Check
-                                type="radio"
-                                id="PayPal"
-                                className="check"
-                                label="PayPal"
-                                value="PayPal"
-                                checked={paymentMethodName === 'PayPal'}
-                                onChange={(e) => setPaymentMethod(e.target.value)}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <Form.Check
-                                type="radio"
-                                className="check"
-                                id="Stripe"
-                                label="Stripe"
-                                value="Stripe"
-                                checked={paymentMethodName === 'Stripe'}
-                                onChange={(e) => setPaymentMethod(e.target.value)}
-                            />
-                        </div>
+        <div className="container fadeInDown">
+            <Helmet>
+                <title>Payment Method</title>
+            </Helmet>
+            <CheckoutSteps step1 step2 step3></CheckoutSteps>
+            <div className="ship container small-container">
+                <h1 className="my-3 title">Payment Method</h1>
+                <Form onSubmit={submitHandler}>
+                    <div className="mb-3">
+                        <Form.Check
+                            type="radio"
+                            id="PayPal"
+                            className="check"
+                            label="PayPal"
+                            value="PayPal"
+                            checked={paymentMethodName === 'PayPal'}
+                            onChange={(e) => setPaymentMethod(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <Form.Check
+                            type="radio"
+                            className="check"
+                            id="Stripe"
+                            label="Stripe"
+                            value="Stripe"
+                            checked={paymentMethodName === 'Stripe'}
+                            onChange={(e) => setPaymentMethod(e.target.value)}
+                        />
+                    </div>
 
-                        <div className="mb-3">
-                            <Button type="submit">Continue</Button>
-                        </div>
-                    </Form>
-                 </div>
+                    <div className="mb-3">
+                        <Button type="submit">Continue</Button>
+                    </div>
+                </Form>
             </div>
+        </div>
     );
 }
