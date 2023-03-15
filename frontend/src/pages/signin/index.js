@@ -51,7 +51,7 @@ export default function SigninScreen() {
                 <div className="container-form fadeInDown">
                     <div className="bg-img"></div>
                     <div className="content">
-                        <form onSubmit={submitHandler}>
+                        <form onSubmit={submitHandler} className="frm">
                             <div>
                                 <input onChange={(e) => setEmail(e.target.value)} type="email" className="fadeIn first" name="email" placeholder="Email" id="email" />
                                 <input onChange={(e) => setPassword(e.target.value)} type="password" className="fadeIn second" name="password" placeholder="Password" id="password" autoComplete='username' />

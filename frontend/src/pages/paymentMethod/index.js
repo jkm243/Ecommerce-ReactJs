@@ -34,14 +34,14 @@ export default function PaymentMethod() {
                     <title>Payment Method</title>
                 </Helmet>
                     <CheckoutSteps step1 step2 step3></CheckoutSteps>
-                <div className="container small-container">
+                <div className="ship container small-container">
                     <h1 className="my-3 title">Payment Method</h1>
                     <Form onSubmit={submitHandler}>
                         <div className="mb-3">
                             <Form.Check
                                 type="radio"
                                 id="PayPal"
-                                classname="check"
+                                className="check"
                                 label="PayPal"
                                 value="PayPal"
                                 checked={paymentMethodName === 'PayPal'}
@@ -51,7 +51,7 @@ export default function PaymentMethod() {
                         <div className="mb-3">
                             <Form.Check
                                 type="radio"
-                                classname="check"
+                                className="check"
                                 id="Stripe"
                                 label="Stripe"
                                 value="Stripe"

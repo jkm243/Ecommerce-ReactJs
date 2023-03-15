@@ -69,6 +69,7 @@ export default function PlaceOrderScreen() {
             dispatch({ type: 'CREATE_SUCCESS' });
             localStorage.removeItem('cartItems');
             navigate(`/order/${data.order._id}`);
+            // console.log(data)
         } catch (err) {
             dispatch({ type: 'CREATE_FAIL' });
             toast.error(getError(err));
@@ -87,7 +88,7 @@ export default function PlaceOrderScreen() {
             <Helmet>
                 <title>Preview Order</title>
             </Helmet>
-            <div className="container">
+            <div className="container ship">
                 <h1 className="my-3 title">Preview Order</h1>
                 <Row>
                     <Col md={8}>

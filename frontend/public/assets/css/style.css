@@ -1105,7 +1105,7 @@ span.feature-review {margin-left: 10px;}
   align-items: center;
 }
 
-form {
+.frm {
   width: 260px;
   height: 200px;
   display: flex;
@@ -1119,15 +1119,15 @@ form {
   justify-content: space-evenly;
   margin-bottom: 5%;
 }
-form input,
-button {
+.frm input,
+.frm button {
   border: none;
   height: 40px;
   outline: none;
   border-radius: 2px;
 }
 
-form input {
+.frm input {
   width: 260px;
   margin: 5px 0;
   background: var(--text-grey-up);
@@ -1139,10 +1139,10 @@ form input {
   transition: all 0.3s ease-in-out;
 }
 
-form input::placeholder {
+.frm input::placeholder {
   font-family: "Poppins", sans-serif;
 }
-form button {
+.frm button {
   background: #bfb00a;
   color: #fff;
   font-size: 16px;
@@ -1151,7 +1151,7 @@ form button {
   transition: 0.1 ease-in-out;
 }
 
-form button:hover {
+.frm button:hover {
   background: #ffffff;
   color: #343434;
 }

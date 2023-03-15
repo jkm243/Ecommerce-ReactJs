@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Store } from '../Store';
 import 'react-toastify/dist/ReactToastify.css';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 function Header() {
   const theme = window.localStorage.getItem("theme");
@@ -67,11 +67,11 @@ function Header() {
                       )}
                     </Link>
                   </li>
-                  <li>
+                  <>
                     {userInfo ? (
-                       <li class="dropdown username">
-                        <a class="dropdown-toggle" data-bs-toggle="dropdown" href="/shipping" role="button" aria-expanded="false">{userInfo.name}</a>
-                        <ul class="dropdown-menu">
+                       <li className="dropdown username">
+                        <a className="dropdown-toggle" data-bs-toggle="dropdown" href="/shipping" role="button" aria-expanded="false">{userInfo.name}</a>
+                        <ul className="dropdown-menu">
                             <li><Link to="/profile">
                           <NavDropdown.Item>Profile</NavDropdown.Item>
                         </Link></li>
@@ -89,7 +89,7 @@ function Header() {
                           </ul>
                         </li>                      
                     ) : (<Link className="nav-setting" to="/signin">Sign In</Link>)}
-                  </li>
+                  </>
                   <li className="nav-setting">
                     <button className="dark-mode-btn dark-mode" onClick={triggerToggle}><span>{isClicked ? "🌓" : "☀️"}</span></button>
                   </li>

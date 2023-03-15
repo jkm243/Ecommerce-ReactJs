@@ -48,7 +48,7 @@ main {
   max-width: 600px;
 }
 .ship{
-  margin-top: 18vh;
+  margin-top: 10vh;
   margin-bottom: 15em;
 }
 .checkout-steps > div {
@@ -62,7 +62,6 @@ main {
 }
 .title{
   font-size: 2em;
-  margin-top: 3em;
   margin-bottom: 1em;
 }
 
@@ -135,9 +134,7 @@ button.thumbnail {
   padding: 0;
 }
 
-.check{
-  font-size: 2px;
-}
+
 .summa{
   padding-left: 1em ;
 }
