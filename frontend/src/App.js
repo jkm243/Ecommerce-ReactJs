@@ -13,6 +13,7 @@ import PaymentMethod from './pages/paymentMethod';
 import PlaceOrderScreen from './pages/placeOrder';
 import OrderScreen from './pages/orderScreen';
 import OrderHistoryScreen from './pages/orderHistory';
+import ProfileScreen from './pages/profileScreen';
 
 function App() {
   
@@ -31,6 +32,7 @@ function App() {
         <Route path="/placeorder" element={<PlaceOrderScreen />} />
         <Route path="/order/:id" element={<OrderScreen />} />
         <Route path="/orderhistory" element={<OrderHistoryScreen />} />
+        <Route path="/profile" element={<ProfileScreen />} />
       </Routes>
       <Footer/>
       <ScrollButton/>

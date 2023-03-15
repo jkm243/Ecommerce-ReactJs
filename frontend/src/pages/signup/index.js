@@ -58,7 +58,7 @@ export default function SigninScreen() {
                 <div className="container-form fadeInDown">
                     <div className="bg-img"></div>
                     <div className="content2">
-                        <form onSubmit={submitHandler}>
+                        <form onSubmit={submitHandler} className="frm">
                             <div>
                                 <input onChange={(e) => setName(e.target.value)} type="name" className="fadeIn first" name="name" placeholder="Name" id="name" />
 
