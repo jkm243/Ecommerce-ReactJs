@@ -77,7 +77,10 @@ function Header() {
                         </Link></li>
                             <li><Link to="/orderhistory">
                           <NavDropdown.Item>Order History</NavDropdown.Item>
-                        </Link></li>                            
+                        </Link></li>
+                          <li><Link to="/dashboard">
+                            <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                          </Link></li>                             
                             <li><hr class="dropdown-divider"></hr></li>
                             <li><Link
                           className="dropdown-item"

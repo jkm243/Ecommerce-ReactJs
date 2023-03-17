@@ -14,6 +14,7 @@ import PlaceOrderScreen from './pages/placeOrder';
 import OrderScreen from './pages/orderScreen';
 import OrderHistoryScreen from './pages/orderHistory';
 import ProfileScreen from './pages/profileScreen';
+import DashboardScreen from './pages/dashboard';
 
 function App() {
   
@@ -33,6 +34,7 @@ function App() {
         <Route path="/order/:id" element={<OrderScreen />} />
         <Route path="/orderhistory" element={<OrderHistoryScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
+        <Route path="/dashboard" element={<DashboardScreen />} />
       </Routes>
       <Footer/>
       <ScrollButton/>
