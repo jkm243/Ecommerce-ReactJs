@@ -4,18 +4,24 @@
   "description": "# Lesson",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
     "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkm243/Ecommerce-ReactJs"
+    "url": "git+https://github.com/jkm243/Ecommerce-ReactJs",
+    "homepage": "http://jkm243.github.io/Ecommerce-ReactJs"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jkm243/Ecommerce-ReactJs/issues"
   },
-  "homepage": "https://github.com/jkm243/Ecommerce-ReactJs#readme"
+  "homepage": "https://github.com/jkm243/Ecommerce-ReactJs#readme",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
