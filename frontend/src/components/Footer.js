@@ -121,7 +121,9 @@ function Footer() {
               <a href="https://www.jacqueskatsuva.com"><i className="fa fa-code"></i></a>
             </div>
             <p>
-              &copy;copyright. designed and developed by <a href="https://www.therichpost.com/">Jacques Katsuva with template html of Jassa</a>
+              &copy;copyright. designed and developed by <a href="https://jacqueskatsuva.netlify.app/">Jacques Katsuva with </a>
+              {/* template html of Jassa
+              https://www.therichpost.com/ */}
             </p>
           </div>
         </div>
