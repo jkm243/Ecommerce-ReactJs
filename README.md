@@ -1,13 +1,13 @@
 <div align="center" id="top"> 
   <img src="./capture.jpeg" alt="Shopping Shoes Reactjs" />
- [![Watch the video](https://i.imgur.com/vKb2F1B.png)](./capture1.webm)
+
   &#xa0;
 
-  <video src='./capture1.webm.mov' width=180/>
+  <img src="./capture1.gif" alt="Shopping Shoes Reactjs" />
 
    &#xa0;
 
-   <video src='./capture2.webm.mov' width=180/>
+  <img src="./capture2.gif" alt="Shopping Shoes Reactjs" />
 
    &#xa0;
 
