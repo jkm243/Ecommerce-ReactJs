@@ -3,11 +3,11 @@
  [![Watch the video](https://i.imgur.com/vKb2F1B.png)](./capture1.webm)
   &#xa0;
 
-  <video src='./capture1.webm' width=180/>
+  <video src='./capture1.webm.mov' width=180/>
 
    &#xa0;
 
-   <video src='./capture2.webm' width=180/>
+   <video src='./capture2.webm.mov' width=180/>
 
    &#xa0;
 
