@@ -3,7 +3,15 @@
 
   &#xa0;
 
-  <a href="https://ecommerce-shoes-reactjs.netlify.app/">Demo</a>
+  <video src='./capture1.webm' width=180/>
+
+   &#xa0;
+
+   <video src='./capture2.webm' width=180/>
+
+   &#xa0;
+
+  <a href="https://ecommerce-react-js-zeta.vercel.app/">Demo</a>
 </div>
 
 <h1 align="center">Shopping Shoes Reactjs</h1>
